@@ -11,7 +11,7 @@ const Banner = () => {
               <h2>Vários restaurantes para você experimentar</h2>
               <p>Escolha entre massas, saladas, lanches e muito mais.</p>
             </Div>
-            <Tag size="big">Destaque</Tag>
+              <Tag size="big">Destaque do dia</Tag>
           </div>
       </Img>
       </>
