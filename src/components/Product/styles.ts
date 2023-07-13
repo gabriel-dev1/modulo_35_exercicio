@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { TagStyle } from '../Tags/styles'
+import { cores } from '../../globalStyles'
 
 export const Card = styled.div`
-  /* background-color: #fff; */
   padding: 8px;
   border-radius: 8px;
-  color: #555;
+  color: ${cores.cinza};
   position: relative;
 
   ${TagStyle} {
