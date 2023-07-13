@@ -14,6 +14,7 @@ export const FooterStyle = styled.footer`
     margin-bottom: 60px;
   }
 `
+
 export const Li = styled.li`
   margin-right: 8px;
 `
@@ -26,7 +27,7 @@ export const Link = styled.a`
   font-size: 14px;
 
   &:hover {
-    color: ${cores.LinkColor};
+    color: ${cores.linkColor};
   }
 `
 
