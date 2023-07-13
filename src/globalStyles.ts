@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  brancoUm: "",
-  brancoDois: "",
-  red: ""
+  vermelho: '#f44444',
+  branco: 'lavender',
+  cinza: '#555'
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -17,8 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding-top: 16px;
-    /*  background-color: #333; */
-    background-color: #eee;
+    background-color: lavender;
   }
 
   .container {
