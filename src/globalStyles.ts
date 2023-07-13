@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 export const cores = {
   vermelho: '#f44444',
   branco: 'lavender',
-  cinza: '#555'
+  cinza: '#555',
+  linkColor: '#a2a2a2'
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -17,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     padding-top: 16px;
-    background-color: lavender;
+    background-color: ${cores.branco};
   }
 
   .container {
