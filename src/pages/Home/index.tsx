@@ -1,70 +1,55 @@
 import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 import Products from '../../models'
-import imageOne from '../../assets/images/salada.png'
-import imageTwo from '../../assets/images/massa.png'
-import imageThree from '../../assets/images/lanche.jpg'
-import imageFour from '../../assets/images/fritas.png'
+import pizza from '../../assets/images/pizza.png'
+import burguer from '../../assets/images/burguer.png'
+import massa from '../../assets/images/massa.png'
 
 const restaurantes: Products[] = [
     {
       id: 1,
       title: 'Restaurantes italianos',
       description: 'As melhores massas',
-      image: imageThree,
-      infos: ['10']
+      image: massa,
+      infos: []
     },
     {
       id: 2,
-      title: 'Restaurantes italianos',
+      title: 'Hamburgueria',
       description: 'As melhores massas',
-      image: imageOne,
-      infos: ['10']
+      image: burguer,
+      infos: []
     },
     {
       id: 3,
-      title: 'Restaurantes italianos',
+      title: 'Pizzaria',
       description: 'As melhores massas',
-      image: imageTwo,
-      infos: ['10']
+      image: pizza,
+      infos: []
     },
+]
+
+const promocoes: Products[] = [
     {
       id: 4,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
-      image: imageFour,
-      infos: ['10']
-    }
-  ]
-
-  const promocoes: Products[] = [
+      title: 'Pizzaria',
+      description: 'As melhores pizzas',
+      image: pizza,
+      infos: ['10% de desconto']
+    },
     {
       id: 5,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
-      image: imageFour,
-      infos: ['10% de desconto']
+      title: 'Hamburgueria',
+      description: 'Os melhores hamburgues',
+      image: burguer,
+      infos: ['20% de desconto']
     },
     {
       id: 6,
       title: 'Restaurantes italianos',
       description: 'As melhores massas',
-      image: imageFour,
-      infos: ['20% de desconto']
-    },
-    {
-      id: 7,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
-      image: imageFour,
+      image: massa,
       infos: ['50% de desconto']
-    },
-    {
-      id: 8,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
-      image: imageFour,
-      infos: ['10% de desconto']
     }
 ]
 
