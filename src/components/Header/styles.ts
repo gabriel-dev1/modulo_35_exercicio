@@ -17,7 +17,7 @@ export const HeaderStyle = styled.header`
     text-decoration: none;
 
     &:hover {
-      color: ${cores.LinkColor};
+      color: ${cores.linkColor};
     }
   }
 
