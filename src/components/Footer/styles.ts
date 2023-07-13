@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import { cores } from '../../globalStyles'
 
 export const FooterStyle = styled.footer`
   padding: 32px 0;
   background-color: #333;
-  color: lavender;
+  color: ${cores.branco};
 
   h4 {
     font-size: 17px;
@@ -25,7 +26,7 @@ export const Link = styled.a`
   font-size: 14px;
 
   &:hover {
-    color: #a2a2a2;
+    color: ${cores.LinkColor};
   }
 `
 
