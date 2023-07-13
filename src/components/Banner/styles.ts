@@ -1,8 +1,7 @@
-import styled from 'styled-components'
 import { TagStyle } from '../Tags/styles'
+import styled from 'styled-components'
 
 export const Img = styled.div`
-  /* width: 100%; */
   height: 560px;
   display: block;
   background-size: cover;
@@ -16,7 +15,7 @@ export const Img = styled.div`
 
   ${TagStyle} {
     position: absolute;
-    top: 450px;
+    top: 70px;
   }
 `
 
