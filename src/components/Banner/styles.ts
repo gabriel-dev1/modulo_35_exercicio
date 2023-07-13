@@ -1,5 +1,6 @@
-import { TagStyle } from '../Tags/styles'
 import styled from 'styled-components'
+import { TagStyle } from '../Tags/styles'
+import { cores } from '../../globalStyles'
 
 export const Img = styled.div`
   height: 560px;
@@ -21,7 +22,7 @@ export const Img = styled.div`
 
 export const Div = styled.div`
   background-color: rgba(100, 50, 0, 0.5);
-  color: lavender;
+  color: ${cores.branco};
   border-radius: 8px;
   padding: 8px;
   width: 500px;
