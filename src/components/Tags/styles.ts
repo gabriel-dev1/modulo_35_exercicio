@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { Props } from './index'
+import { cores } from '../../globalStyles'
 
 export const TagStyle = styled.div<Props>`
-  background-color: #555;
-  color: lavender;
+  background-color: ${cores.cinza};
+  color: ${cores.branco};
   border-radius: 9px;
   display: inline-block;
   font-weight: bold;
