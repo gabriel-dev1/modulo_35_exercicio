@@ -1,18 +1,17 @@
 import Product from '../Product'
-import { Section, Title } from './styles'
+import { Section } from './styles'
 import Products from '../../models'
 
 export type Props = {
   title: string
-  background: 'white' | 'red'
   products: Products[]
+  cardbackground: 'branco' | 'vermelho'
 }
 
-const ProductsList = ({background, title, products}: Props) => {
+const ProductsList = ({ products, cardbackground }: Props) => {
   return (
-      <Section background={background}>
-          <div className="container">
-          <Title>{title}</Title>
+    <Section cardbackground={cardbackground}>
+        <div className="container">
           <ul>
             {products.map((product) => (
               <Product
@@ -23,7 +22,7 @@ const ProductsList = ({background, title, products}: Props) => {
                 infos={product.infos} />
             ))}
           </ul>
-          </div>
+    </div>
       </Section>
   )
 }
