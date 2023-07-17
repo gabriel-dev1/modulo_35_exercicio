@@ -3,15 +3,12 @@ import { cores } from '../../globalStyles'
 
 export const FooterStyle = styled.footer`
   padding: 32px 0;
-  background-color: #333;
-  color: ${cores.branco};
+  background-color: #ffebd9;
+  color: #e66767;
+  text-align: center;
 
-  h4 {
-    font-size: 17px;
-  }
-
-  .margin {
-    margin-bottom: 60px;
+  span {
+    font-size: 10px;
   }
 `
 
@@ -23,7 +20,7 @@ export const Link = styled.a`
   margin-right: 8px;
   text-decoration: none;
   font-weight: bold;
-  color: #ccc;
+  color: #e66767;
   font-size: 14px;
 
   &:hover {
@@ -31,7 +28,8 @@ export const Link = styled.a`
   }
 `
 
-export const Ul = styled.ul`
+export const Links = styled.ul`
   display: flex;
-  margin-top: 16px;
+  justify-content: center;
+  margin: 32px 0 64px;
 `

@@ -1,42 +1,27 @@
-import { FooterStyle, Li, Link, Ul } from "./styles"
+import { FooterStyle, Link, Links, Li } from "./styles"
+import logo from '../../assets/images/logo.png'
 
 const Footer  = () => {
-  const date = new Date()
-  const year = date.getFullYear()
   return (
     <>
      <FooterStyle>
-          <div className="container">
-            <div className="margin">
-            <h4>Categorias</h4>
-            <Ul>
-              <Li>
-                <Link href="">Pizzarias</Link>
-              </Li>
-              <Li>
-                <Link href="">Hamburguerias</Link>
-              </Li>
-              <Li>
-                <Link href="">Culinária japonesa</Link>
-              </Li>
-              <Li>
-                <Link href="">Salgados</Link>
-              </Li>
-            </Ul>
-            </div>
-            <div className="margin">
-            <h4>Acesso rápido</h4>
-            <Ul>
-              <Li>
-                <Link href="">Restaurantes</Link>
-              </Li>
-              <Li>
-                <Link href="">Promoções</Link>
-              </Li>
-            </Ul>
-            </div>
-            {year} - &copy; Delivery Foods - Todos os direitos reservados
-          </div>
+        <img src={logo} />
+        <Links>
+          <Li>
+            <Link href="">instagram</Link>
+          </Li>
+          <Li>
+            <Link href="">facebook</Link>
+          </Li>
+          <Li>
+            <Link href="">twitter</Link>
+          </Li>
+        </Links>
+        <span>
+          A efood é uma plataforma para divulgação de
+          estabelecimentos, a responsabilidade pela entrega,
+          qualidade dos produtos é toda do estabelecimento contratado.
+        </span>
      </FooterStyle>
     </>
   )
