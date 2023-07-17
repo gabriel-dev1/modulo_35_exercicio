@@ -2,14 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../globalStyles'
 
 export const HeaderStyle = styled.header`
-  background-color: ${cores.vermelho};
+  background-color: #ffebd9;
+  width: 100%;
   padding: 20px;
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-  border-bottom: 1px solid ${cores.cinza};
+  text-align: center;
 
   a {
     color: ${cores.branco};
@@ -20,34 +16,20 @@ export const HeaderStyle = styled.header`
       color: ${cores.linkColor};
     }
   }
-
-  div {
-    display: flex;
-    align-items: center;
-  }
 `
 
-export const Title = styled.h1`
-  color: ${cores.cinza};
-  background-color: ${cores.branco};
-  padding: 8px;
-  border-radius: 8px;
-`
-
-export const List = styled.ul`
-  display: flex;
-  margin-left: 40px;
-`
-
-export const ListItem = styled.li`
-  font-weight: bold;
-  margin-right: 16px;
-`
-
-export const LinkCar = styled.a`
-  display: flex;
-
-  img {
+export const HeaderProfile = styled(HeaderStyle)`
+  span {
     margin-left: 8px;
   }
+`
+
+export const SubTitle = styled.p`
+  font-weight: bold;
+  color: #e66767;
+  line-height: 42px;
+  font-size: 32px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
 `

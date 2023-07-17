@@ -1,32 +1,33 @@
-import { HeaderStyle, LinkCar, List, ListItem, Title } from './styles'
+import { HeaderStyle, SubTitle, HeaderProfile } from './styles'
 import { Link } from 'react-router-dom'
-import imgCarrinho from '../../assets/images/carrinho.svg'
+import logo from '../../assets/images/logo.png'
 
-const Header = () => {
+type Props = {
+  headerProps: 'home' | 'profile'
+}
+
+const Header = ({ headerProps }: Props) => {
+  if (headerProps === 'profile') {
+    return (
+      <HeaderProfile>
+        <Link to="/">
+          <img src={logo} />
+        </Link>
+        <p>restaurantes</p>
+        <span>0 produto(s) no carrinho</span>
+      </HeaderProfile>
+    )
+  }
+
   return (
     <>
       <HeaderStyle>
-        <div>
             <Link to="/">
-              <Title>Delivery Foods</Title>
+              <img src={logo} />
             </Link>
-        <nav>
-          <List>
-              <ListItem>
-                  <Link to="/new">Categorias</Link>
-              </ListItem>
-              <ListItem>
-                  <a href="">Promoções</a>
-              </ListItem>
-              <ListItem>
-                  <a href="">Em breve</a>
-              </ListItem>
-          </List>
-        </nav>
-        </div>
-        <LinkCar href="">
-          0 Produtos <img src={imgCarrinho} alt="Carrinho" />
-        </LinkCar>
+            <div>
+              <SubTitle>Viva experiencias gastronomicas no conforto da sua casa</SubTitle>
+            </div>
       </HeaderStyle>
     </>
   )
