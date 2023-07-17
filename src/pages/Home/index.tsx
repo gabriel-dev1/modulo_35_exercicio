@@ -1,65 +1,61 @@
-import Banner from '../../components/Banner'
 import ProductsList from '../../components/ProductsList'
 import Products from '../../models'
 import pizza from '../../assets/images/pizza.png'
 import burguer from '../../assets/images/burguer.png'
 import massa from '../../assets/images/massa.png'
+import Header from '../../components/Header'
 
 const restaurantes: Products[] = [
     {
       id: 1,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
+      title: 'Hioki Sushi',
+      description: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Peça já!',
       image: massa,
-      infos: []
+      infos: ['Destaque', 'Japonesa']
     },
     {
       id: 2,
-      title: 'Hamburgueria',
-      description: 'As melhores massas',
+      title: 'La Dolce Vita Tratorria',
+      description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
       image: burguer,
-      infos: []
+      infos: ['Italiana']
     },
     {
       id: 3,
-      title: 'Pizzaria',
-      description: 'As melhores massas',
+      title: 'La Dolce Vita Tratorria',
+      description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
       image: pizza,
-      infos: []
+      infos: ['Italiana']
     },
-]
-
-const promocoes: Products[] = [
     {
       id: 4,
-      title: 'Pizzaria',
-      description: 'As melhores pizzas',
-      image: pizza,
-      infos: ['10% de desconto']
+      title: 'La Dolce Vita Tratorria',
+      description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      image: massa,
+      infos: ['Italiana']
     },
     {
       id: 5,
-      title: 'Hamburgueria',
-      description: 'Os melhores hamburgues',
+      title: 'La Dolce Vita Tratorria',
+      description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
       image: burguer,
-      infos: ['20% de desconto']
+      infos: ['Italiana']
     },
     {
       id: 6,
-      title: 'Restaurantes italianos',
-      description: 'As melhores massas',
-      image: massa,
-      infos: ['50% de desconto']
+      title: 'La Dolce Vita Tratorria',
+      description: 'A La Dolce Vita Trattoria leva a autêntica cozinha italiana até você! Desfrute de massas caseiras, pizzas deliciosas e risotos incríveis, tudo no conforto do seu lar. Entrega rápida, pratos bem embalados e sabor inesquecível. Peça já!',
+      image: pizza,
+      infos: ['Italiana']
     }
 ]
 
 const Home = () => {
     return (
-        <>
-          <Banner />
-          <ProductsList title={'Restaurantes'} background="white" products={restaurantes} />
-          <ProductsList title={'Promoções'} background="red" products={promocoes} />
-        </>
+      <>
+        <Header headerProps={'home'}  />
+        <ProductsList title={'Restaurantes'} products={restaurantes} cardbackground={'branco'} />
+      </>
     )
 }
 
