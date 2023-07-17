@@ -1,50 +1,61 @@
 import ProductsList from '../../components/ProductsList'
 import Products from '../../models'
-import imageOne from '../../assets/images/salada.png'
-import imageTwo from '../../assets/images/massa.png'
-import imageThree from '../../assets/images/lanche.jpg'
-import imageFour from '../../assets/images/fritas.png'
+import pizza from '../../assets/images/pizza.png'
+import burguer from '../../assets/images/burguer.png'
+import Header from '../../components/Header'
 
-const restaurantes : Products[] = [
+const pizzarias : Products[] = [
     {
       id: 1,
       title: 'Pizzarias',
-      description: 'As melhores massas',
-      image: imageThree,
+      description: 'As melhores pizzas',
+      image: pizza,
       infos: []
     },
     {
       id: 2,
       title: 'Hamburgueria',
-      description: 'As melhores massas',
-      image: imageOne,
+      description: 'Os melhores hamburgues',
+      image: pizza,
       infos: []
     },
     {
       id: 3,
       title: 'Restaurantes italianos',
       description: 'As melhores massas',
-      image: imageTwo,
+      image: pizza,
       infos: []
     },
     {
       id: 4,
-      title: 'Restaurantes italianos',
+      title: 'Piz',
+      description: 'As melhores pizzas',
+      image: burguer,
+      infos: []
+    },
+    {
+      id: 5,
+      title: 'Hamburgueria',
       description: 'As melhores massas',
-      image: imageFour,
+      image: burguer,
+      infos: []
+    },
+    {
+      id: 6,
+      title: 'Hamburgueria',
+      description: 'As melhores massas',
+      image: burguer,
       infos: []
     }
-  ]
+]
 
 const Cardapios = () => {
-    return (
-        <>
-          <ProductsList title={'Pizzarias'} background="white" products={restaurantes} />
-          <ProductsList title={'Hamburguerias'} background="red" products={restaurantes} />
-          <ProductsList title={'Culinária japonesa'} background="white" products={restaurantes} />
-          <ProductsList title={'Salgados'} background="red" products={restaurantes} />
-        </>
-   )
+  return (
+   <>
+      <Header headerProps={'profile'} />
+      <ProductsList title={'Pizzarias'} products={pizzarias} cardbackground={'vermelho'} />
+   </>
+  )
 }
 
 export default Cardapios
