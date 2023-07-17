@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const cores = {
-  vermelho: '#f44444',
-  branco: 'lavender',
-  cinza: '#555',
+  vermelho: '#e66767',
+  branco: '#fff',
+  amarelo: '#ffebd9',
   linkColor: '#a2a2a2'
 }
 
@@ -14,11 +14,6 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     list-style: none;
-  }
-
-  body {
-    padding-top: 16px;
-    background-color: ${cores.branco};
   }
 
   .container {
