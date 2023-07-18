@@ -5,7 +5,7 @@ import Cardapios from './pages/Cardapios'
 const Rotas = () => (
   <Routes>
       <Route path="/" element={<Home />}></Route>
-      <Route path="/new" element={<Cardapios />}></Route>
+      <Route path="/profile/:id" element={<Cardapios />}></Route>
   </Routes>
 )
 
