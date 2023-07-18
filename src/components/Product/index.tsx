@@ -25,7 +25,7 @@ const Product = ({ title, description, image, infos }: Props) => {
             <img src={nota} />
           </div>
           <p>{description}</p>
-          <Link to="/profile/:${id}">Saiba Mais</Link>
+          <Link to="/profile">Saiba Mais</Link>
         </CardFooter>
       </Card>
   )
