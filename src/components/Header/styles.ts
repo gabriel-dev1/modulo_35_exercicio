@@ -8,9 +8,8 @@ export const HeaderStyle = styled.header`
   text-align: center;
 
   a {
-    color: ${cores.branco};
-    font-weight: bold;
     text-decoration: none;
+    color: ${cores.vermelho};
 
     &:hover {
       color: ${cores.linkColor};
@@ -19,8 +18,13 @@ export const HeaderStyle = styled.header`
 `
 
 export const HeaderProfile = styled(HeaderStyle)`
-  span {
-    margin-left: 8px;
+  color: ${cores.vermelho};
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    font-weight: bold;
   }
 `
 

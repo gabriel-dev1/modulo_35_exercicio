@@ -13,8 +13,10 @@ const Header = ({ headerProps }: Props) => {
         <Link to="/">
           <img src={logo} />
         </Link>
-        <p>restaurantes</p>
-        <span>0 produto(s) no carrinho</span>
+        <div className="container">
+          <Link to="/">Restaurantes</Link>
+          <span>0 produto(s) no carrinho</span>
+        </div>
       </HeaderProfile>
     )
   }
@@ -26,7 +28,7 @@ const Header = ({ headerProps }: Props) => {
               <img src={logo} />
             </Link>
             <div>
-              <SubTitle>Viva experiencias gastronomicas no conforto da sua casa</SubTitle>
+              <SubTitle>Viva experiências gastronômicas no conforto da sua casa</SubTitle>
             </div>
       </HeaderStyle>
     </>
