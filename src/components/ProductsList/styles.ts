@@ -1,15 +1,9 @@
 import styled from 'styled-components'
-import { Card } from '../Product/styles'
 import { cores } from '../../globalStyles'
-import { Props } from '.'
 
-export const Section = styled.section<Omit<Props, 'title' | 'products'>>`
+export const Section = styled.section`
   padding: 64px 0;
   background-color: rgba(255, 235, 217, 0.3);
-
-  ${Card} {
-    background-color: ${(props) => props.cardbackground === 'branco' ? cores.branco : cores.vermelho};
-  }
 
   ul {
     display: grid;

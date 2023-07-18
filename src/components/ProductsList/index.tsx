@@ -5,12 +5,11 @@ import Products from '../../models'
 export type Props = {
   title: string
   products: Products[]
-  cardbackground: 'branco' | 'vermelho'
 }
 
-const ProductsList = ({ products, cardbackground }: Props) => {
+const ProductsList = ({ products }: Props) => {
   return (
-    <Section cardbackground={cardbackground}>
+    <Section>
         <div className="container">
           <ul>
             {products.map((product) => (
@@ -19,7 +18,8 @@ const ProductsList = ({ products, cardbackground }: Props) => {
                 title={product.title}
                 description={product.description}
                 image={product.image}
-                infos={product.infos} />
+                infos={product.infos}
+              />
             ))}
           </ul>
     </div>
