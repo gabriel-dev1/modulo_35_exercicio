@@ -5,7 +5,10 @@ export const FooterStyle = styled.footer`
   padding: 32px 0;
   background-color: #ffebd9;
   color: #e66767;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   span {
     font-size: 10px;
@@ -18,6 +21,7 @@ export const Li = styled.li`
 
 export const Link = styled.a`
   margin-right: 8px;
+  margin-left: 12px;
   text-decoration: none;
   font-weight: bold;
   color: #e66767;

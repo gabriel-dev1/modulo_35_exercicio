@@ -1,5 +1,8 @@
 import { FooterStyle, Link, Links, Li } from "./styles"
 import logo from '../../assets/images/logo.png'
+import instagram from '../../assets/images/instagram.png'
+import facebook from '../../assets/images/facebook.png'
+import twitter from '../../assets/images/twitter.png'
 
 const Footer  = () => {
   return (
@@ -8,13 +11,19 @@ const Footer  = () => {
         <img src={logo} />
         <Links>
           <Li>
-            <Link href="">instagram</Link>
+            <Link href="">
+              <img src={instagram} />
+            </Link>
           </Li>
           <Li>
-            <Link href="">facebook</Link>
+            <Link href="">
+              <img src={facebook} />
+            </Link>
           </Li>
           <Li>
-            <Link href="">twitter</Link>
+            <Link href="">
+              <img src={twitter} />
+            </Link>
           </Li>
         </Links>
         <span>
