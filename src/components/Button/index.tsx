@@ -2,7 +2,7 @@ import { Button } from './styles'
 
 const ButtonStyle = () => {
   return (
-    <Button>Adiconar ao carrinho</Button>
+    <Button>Adicionar ao carrinho</Button>
   )
 }
 
