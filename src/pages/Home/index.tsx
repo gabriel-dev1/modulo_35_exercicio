@@ -9,7 +9,7 @@ const restaurantes: Products[] = [
     {
       id: 1,
       title: 'Hioki Sushi',
-      description: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Peça já!',
+      description: 'Peça já o melhor da culinária japonesa no conforto da sua casa! Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis. Entrega rápida, embalagens cuidadosas e qualidade garantida. Peça já e experimente!',
       image: massa,
       infos: ['Destaque', 'Japonesa']
     },
@@ -54,7 +54,7 @@ const Home = () => {
     return (
       <>
         <Header headerProps={'home'}  />
-        <ProductsList title={'Restaurantes'} products={restaurantes} cardbackground={'branco'} />
+        <ProductsList title={'Restaurantes'} products={restaurantes} />
       </>
     )
 }
