@@ -1,4 +1,4 @@
-import { Div, Img } from './styles'
+import { Img } from './styles'
 import img from '../../assets/images/banner.jpg'
 import Tag from '../Tags'
 
@@ -7,11 +7,10 @@ const Banner = () => {
       <>
       <Img style={{backgroundImage: `url(${img})`}}>
           <div className="container">
-            <Div>
-              <h2>Vários restaurantes para você experimentar</h2>
-              <p>Escolha entre massas, saladas, lanches e muito mais.</p>
-            </Div>
-              <Tag size="big">Destaque do dia</Tag>
+            <div>
+              <Tag>Italiana</Tag>
+            </div>
+            <h2>La Dolce Vita Trattoria</h2>
           </div>
       </Img>
       </>
