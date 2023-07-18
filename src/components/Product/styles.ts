@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 import { TagStyle } from '../Tags/styles'
-/* import { cores } from '../../globalStyles' */
+import { cores } from '../../globalStyles'
 
 export const Card = styled.div`
-  color: #e66767;
-  background-color: #ffffff;
   position: relative;
+  color: ${cores.vermelho};
   width: 444px;
-  height: 50%;
+  padding: 10px;
 
   p {
     padding: 16px 0;
@@ -33,6 +32,14 @@ export const CardFooter = styled.div`
   padding-top: 0;
   border: 1px solid #e66767;
   border-top: none;
+
+ /*  div {
+    display: flex;
+
+    img {
+      margin-left: 155px;
+    } */
+  }
 `
 
 export const Image = styled.img`

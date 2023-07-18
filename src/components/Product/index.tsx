@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import Tag from '../Tags'
 import { Card, CardFooter, Image, Infos } from './styles'
+import nota from '../../assets/images/nota.png'
 
-type Props = {
+export type Props = {
   title: string
   description: string
   image: string
@@ -19,9 +20,12 @@ const Product = ({ title, description, image, infos }: Props) => {
           ))}
         </Infos>
         <CardFooter>
-          <h3>{title}</h3>
+          <div>
+            <h3>{title}</h3>
+            <img src={nota} />
+          </div>
           <p>{description}</p>
-          <Link to="/new">Saiba Mais</Link>
+          <Link to="/profile/:${id}">Saiba Mais</Link>
         </CardFooter>
       </Card>
   )
