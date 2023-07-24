@@ -69,7 +69,11 @@ const Cardapios = () => {
   }, [id])
 
   if (!teste) {
-    return <div>Carregando</div>
+    return <h3>carregando</h3>
+  }
+
+  if (!teste2) {
+    return <h3>Carregando</h3>
   }
 
   return (
@@ -79,7 +83,7 @@ const Cardapios = () => {
       <Section>
         <div className="container">
             <ul>
-               {/* {teste.map((t) => (
+             {teste2.map((t) => (
                 <li key={t.cardapio.id}>
                 <Card>
                  <img src={t.cardapio.foto} />
@@ -90,8 +94,7 @@ const Cardapios = () => {
                  </CardFooter>
                </Card>
                 </li>
-              ))} */}
-              {teste.cardapio.descricao}
+              ))}
             </ul>
         </div>
         </Section>
