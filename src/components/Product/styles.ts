@@ -33,12 +33,9 @@ export const CardFooter = styled.div`
   border: 1px solid #e66767;
   border-top: none;
 
- /*  div {
+  div {
     display: flex;
-
-    img {
-      margin-left: 155px;
-    } */
+    justify-content: space-between;
   }
 `
 
