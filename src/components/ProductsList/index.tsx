@@ -1,6 +1,5 @@
 import Product from '../Product'
 import { Section } from './styles'
-/* import Products from '../../models' */
 import { Products } from '../../pages/Home'
 
 export type Props = {
