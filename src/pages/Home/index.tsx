@@ -1,10 +1,15 @@
-import ProductsList from '../../components/ProductsList'
-/* import Products from '../../models'
-import pizza from '../../assets/images/pizza.png'
-import burguer from '../../assets/images/burguer.png'
-import massa from '../../assets/images/massa.png' */
-import Header from '../../components/Header'
 import { useEffect, useState } from 'react'
+import ProductsList from '../../components/ProductsList'
+import Header from '../../components/Header'
+
+export interface ItemRestaurant {
+  id: number
+  foto: string
+  preco: number
+  descricao: string
+  nome: string
+  porcao: string
+}
 
 export type Products = {
   id: number
@@ -14,14 +19,7 @@ export type Products = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: {
-    id: number
-    foto: string
-    preco: number
-    descricao: string
-    nome: string
-    porcao: string
-  }
+  cardapio: ItemRestaurant[]
 }
 
 const Home = () => {
