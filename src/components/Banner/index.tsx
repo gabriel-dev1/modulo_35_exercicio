@@ -26,14 +26,14 @@ const Banner = ({ produto }: Props) => {
 
   return (
       <>
-      <Img style={{backgroundImage: `url(${produto.capa})`}}>
+      {/* <Img style={{backgroundImage: `url(${produto.capa})`}}>
           <div className="container">
             <div>
               <Tag>{produto?.tipo}</Tag>
             </div>
             <h2>{produto?.titulo}</h2>
           </div>
-      </Img>
+      </Img> */}
       </>
   )
 }
