@@ -1,6 +1,7 @@
 import Product from '../Product'
 import { Section } from './styles'
-import Products from '../../models'
+/* import Products from '../../models' */
+import { Products } from '../../pages/Home'
 
 export type Props = {
   title: string
@@ -13,13 +14,15 @@ const ProductsList = ({ products }: Props) => {
         <div className="container">
           <ul>
             {products.map((product) => (
-              <Product
-                key={product.id}
-                title={product.title}
-                description={product.description}
-                image={product.image}
-                infos={product.infos}
-              />
+              <li key={product.id}>
+                <Product
+                  id={product.id}
+                  title={product.titulo}
+                  description={product.descricao}
+                  image={product.capa}
+                  avaliacao={product.avaliacao}
+                />
+              </li>
             ))}
           </ul>
     </div>
