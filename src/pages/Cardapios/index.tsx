@@ -11,43 +11,50 @@ import ButtonStyle from '../../components/Button'
 import Section from '../../components/Section'
 import { Img } from '../../components/Banner/styles'
 import Tag from '../../components/Tags'
+import ProductsList from '../../components/ProductsList'
+/* import { ItemRestaurant } from '../../pages/Home' */
 
 const Cardapios = () => {
   const { id } = useParams()
-  const [teste, setTeste] = useState<Products>()
-  const [teste2, setTeste2] = useState<Products[]>([])
+  const [item, setItem] = useState<Products[]>([])
+  const [banner, setBanner] = useState<Products>()
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setTeste2(res))
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setItem(res))
   }, [id])
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/`).then((res) => res.json()).then((res) => setTeste(res))
-  }, [])
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setBanner(res))
+  }, [id])
 
-  if (!teste) {
+  if (!item) {
+    return <h3>carregando</h3>
+  }
+
+  if (!banner) {
     return <h3>carregando</h3>
   }
 
   return (
    <>
       <Header headerProps={'profile'} />
-      <Img style={{backgroundImage: `url(${teste.capa})`}}>
+      {/* <Img style={{backgroundImage: `url(${teste.capa})`}}>
           <div className="container">
             <div>
               <Tag>{teste.tipo}</Tag>
             </div>
             <h2>{teste.titulo}</h2>
           </div>
-      </Img>
-      {/* <Banner produto={teste} /> */}
+      </Img> */}
+      <Banner produto={banner} />
+      {/* {item.cardapio}
      <Section>
         <div className="container">
             <ul>
-             {teste2.map((t) => (
-                <li key={t.cardapio.id}>
+             {item.map((t) => (
+                <li key={t}>
                 <Card>
-                 <img src={t.cardapio.foto} />
+                 <img src={cardapio.} />
                  <CardFooter>
                    <h3>{t.cardapio.nome}</h3>
                    <p>{t.cardapio.descricao}</p>
@@ -58,8 +65,8 @@ const Cardapios = () => {
               ))}
             </ul>
         </div>
-        </Section>
-     {/*  <ProductsRestList products={teste2} /> */}
+        </Section> */}
+     <ProductsRestList produtos={item} />
    </>
   )
 }
