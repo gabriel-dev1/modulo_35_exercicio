@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { cores } from '../../globalStyles'
 
-export const Button = styled.button`
+export const ButtonStyles = styled.button`
   padding: 8px;
   cursor: pointer;
   background-color: ${cores.amarelo};

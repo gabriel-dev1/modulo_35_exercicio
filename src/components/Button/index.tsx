@@ -1,9 +1,15 @@
-import { Button } from './styles'
+import { ButtonStyles } from './styles'
 
-const ButtonStyle = () => {
+type Props = {
+  children: string
+  onClick?: () => void
+  type?: 'button' | 'link'
+}
+
+const Button = ({ children, onClick }: Props) => {
   return (
-    <Button>Adicionar ao carrinho</Button>
+    <ButtonStyles onClick={onClick}>{children}</ButtonStyles>
   )
 }
 
-export default ButtonStyle
+export default Button
