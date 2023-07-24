@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import Tag from '../Tags'
 import { Card, CardFooter, Image, Infos } from './styles'
-import nota from '../../assets/images/nota.png'
 
 export type Props = {
   title: string
@@ -41,5 +40,3 @@ const Product = ({ title, description, image, infos, id, avaliacao }: Props) => 
 }
 
 export default Product
-
-/* 222x250 */
