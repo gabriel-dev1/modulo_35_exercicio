@@ -72,10 +72,6 @@ const Cardapios = () => {
     return <div>Carregando</div>
   }
 
-  if (!teste2) {
-    return <div>Carregando</div>
-  }
-
   return (
    <>
       <Header headerProps={'profile'} />
@@ -99,7 +95,7 @@ const Cardapios = () => {
             </ul>
         </div>
         </Section> */}
-      <ProductsRestList products={teste} />
+      <ProductsRestList products={teste2} />
    </>
   )
 }
