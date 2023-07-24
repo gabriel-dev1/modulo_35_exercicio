@@ -3,7 +3,7 @@ import { Products } from '../../pages/Home'
 import { Section } from './styles'
 
 export type Props = {
-  products?: Products
+  products?: Products[]
 }
 
 // tentar trazer a api para este arquivo
@@ -17,7 +17,7 @@ const ProductsRestList = ({ products }: Props) => {
         <Section>
         <div className="container">
             <ul>
-              {/* {products?.map((product) => (
+               {products.map((product) => (
                   <li key={product.cardapio.id}>
                     <ProductRest
                       id={product.cardapio.id}
@@ -26,8 +26,7 @@ const ProductsRestList = ({ products }: Props) => {
                       image={product.cardapio.foto}
                     />
                   </li>
-                ))} */}
-                {products.cardapio.preco}
+                ))}
             </ul>
         </div>
         </Section>
