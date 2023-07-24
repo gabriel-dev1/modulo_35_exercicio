@@ -12,58 +12,18 @@ import Section from '../../components/Section'
 import { Img } from '../../components/Banner/styles'
 import Tag from '../../components/Tags'
 
-/* const pizzarias : Products[] = [
-    {
-      id: 1,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: pizza,
-      infos: []
-    },
-    {
-      id: 2,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: pizza,
-      infos: []
-    },
-    {
-      id: 3,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: pizza,
-      infos: []
-    },
-    {
-      id: 4,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: burguer,
-      infos: []
-    },
-    {
-      id: 5,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: burguer,
-      infos: []
-    },
-    {
-      id: 6,
-      title: 'Pizza Marguerita',
-      description: 'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-      image: burguer,
-      infos: []
-    }
-] */
-
 const Cardapios = () => {
   const { id } = useParams()
   const [teste, setTeste] = useState<Products>()
+  const [teste2, setTeste2] = useState<Products[]>([])
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setTeste(res))
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setTeste2(res))
   }, [id])
+
+  useEffect(() => {
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/`).then((res) => res.json()).then((res) => setTeste(res))
+  }, [])
 
   if (!teste) {
     return <h3>carregando</h3>
@@ -81,7 +41,7 @@ const Cardapios = () => {
           </div>
       </Img>
       {/* <Banner produto={teste} /> */}
-     {/*  <Section>
+     <Section>
         <div className="container">
             <ul>
              {teste2.map((t) => (
@@ -98,7 +58,7 @@ const Cardapios = () => {
               ))}
             </ul>
         </div>
-        </Section> */}
+        </Section>
      {/*  <ProductsRestList products={teste2} /> */}
    </>
   )
