@@ -76,10 +76,10 @@ const Cardapios = () => {
    <>
       <Header headerProps={'profile'} />
       <Banner produto={teste} />
-      {/* <Section>
+      <Section>
         <div className="container">
             <ul>
-               {teste.map((t) => (
+               {/* {teste.map((t) => (
                 <li key={t.cardapio.id}>
                 <Card>
                  <img src={t.cardapio.foto} />
@@ -90,12 +90,12 @@ const Cardapios = () => {
                  </CardFooter>
                </Card>
                 </li>
-              ))}
+              ))} */}
               {teste.cardapio.descricao}
             </ul>
         </div>
-        </Section> */}
-      <ProductsRestList products={teste2} />
+        </Section>
+     {/*  <ProductsRestList products={teste2} /> */}
    </>
   )
 }
