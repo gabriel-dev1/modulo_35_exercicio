@@ -3,27 +3,27 @@ import { Products } from '../../pages/Home'
 import { Section } from './styles'
 
 export type Props = {
-  products?: Products[]
+  produtos: Products[]
 }
 
 // tentar trazer a api para este arquivo
 // products.map não é um array
 
-const ProductsRestList = ({ products }: Props) => {
-  if (!products) {
-    return <div>Carregando...</div>
+const ProductsRestList = ({ produtos }: Props) => {
+  if (!produtos) {
+    return <h3>Carregando...</h3>
   }
     return (
         <Section>
         <div className="container">
             <ul>
-               {products.map((product) => (
-                  <li key={product.cardapio.id}>
+               {produtos.map((produto) => (
+                  <li key={produto.cardapio.id}>
                     <ProductRest
-                      id={product.cardapio.id}
-                      title={product.cardapio.nome}
-                      description={product.cardapio.descricao}
-                      image={product.cardapio.foto}
+                      id={produto.cardapio.id}
+                      title={produto.cardapio.nome}
+                      description={produto.cardapio.descricao}
+                      image={produto.cardapio.foto}
                     />
                   </li>
                 ))}
