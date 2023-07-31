@@ -4,10 +4,11 @@ import { cores } from '../../globalStyles'
 export const Card = styled.div`
   color: ${cores.amarelo};
   background-color: ${cores.vermelho};
-  width: 300px;
-  padding: 10px;
+  width: 320px;
+  padding: 8px;
   line-height: 27px;
   height: 100%;
+  border-radius: 8px;
 
   p {
     padding: 16px 0;
@@ -16,7 +17,6 @@ export const Card = styled.div`
 
 export const CardFooter = styled.div`
   background-color: ${cores.vermelho};
-  padding: 8px;
   padding-top: 0;
   border: 1px solid #e66767;
   border-top: none;
@@ -25,12 +25,7 @@ export const CardFooter = styled.div`
 export const Image = styled.img`
   width: 100%;
   height: 217px;
-`
-
-export const Infos = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  border-radius: 8px;
 `
 
 export const ModalStyles = styled.div`
@@ -59,22 +54,29 @@ export const ModalStyles = styled.div`
 `
 
 export const ModalItems = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 960px;
+  max-width: 1024px;
+  height: 344px;
   position: relative;
   z-index: 1;
   background-color: ${cores.vermelho};
   color: ${cores.amarelo};
-  padding: 30px;
+  padding: 0 32px;
 
   header {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-top: 16px;
+
     img {
-      width: 100px;
-      display: block;
-      justify-content: space-between;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
     }
+  }
+
+  > div {
+    display: flex;
   }
 
   h3 {
@@ -82,7 +84,8 @@ export const ModalItems = styled.div`
   }
 
   .porcao {
-    padding: 16px 0;
+    padding-top: 32px;
+    padding-bottom: 16px;
   }
 
   img {
