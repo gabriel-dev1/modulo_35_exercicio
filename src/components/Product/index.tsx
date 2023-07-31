@@ -9,7 +9,7 @@ export type Props = {
   image: string
   id: number
   avaliacao: number
-  tipo?: string
+  tipo: string
 }
 
 const Product = ({ title, description, image, id, avaliacao, tipo }: Props) => {
