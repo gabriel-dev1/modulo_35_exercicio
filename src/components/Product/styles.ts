@@ -5,7 +5,8 @@ import { cores } from '../../globalStyles'
 export const Card = styled.div`
   position: relative;
   color: ${cores.vermelho};
-  width: 444px;
+  width: 472px;
+  height: 398px;
   padding: 10px;
 
   p {
@@ -36,6 +37,17 @@ export const CardFooter = styled.div`
   div {
     display: flex;
     justify-content: space-between;
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+
+      img {
+        padding-left: 8px;
+      }
+    }
   }
 `
 
