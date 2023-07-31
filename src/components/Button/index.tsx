@@ -1,14 +1,15 @@
 import { ButtonStyles } from './styles'
 
-type Props = {
+export type Props = {
   children: string
   onClick?: () => void
   type?: 'button' | 'link'
+  variant: 'primary' | 'secondary'
 }
 
-const Button = ({ children, onClick }: Props) => {
+const Button = ({ onClick, variant, children }: Props) => {
   return (
-    <ButtonStyles onClick={onClick}>{children}</ButtonStyles>
+    <ButtonStyles variant={variant} onClick={onClick}>{children}</ButtonStyles>
   )
 }
 
