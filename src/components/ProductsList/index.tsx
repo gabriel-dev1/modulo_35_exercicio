@@ -20,6 +20,7 @@ const ProductsList = ({ products }: Props) => {
                   description={product.descricao}
                   image={product.capa}
                   avaliacao={product.avaliacao}
+                  tipo={product.tipo}
                 />
               </li>
             ))}
