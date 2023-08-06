@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { /* ItemRestaurant */ Products } from '../pages/Home'
-/* import { ProductRestaurant } from '../pages/Cardapios' */
+import { Products } from '../pages/Home'
 
 const api = createApi({
     baseQuery: fetchBaseQuery({
@@ -10,12 +9,9 @@ const api = createApi({
         getRestaurants: builder.query<Products[], void>({
             query: () => 'restaurantes'
         }),
-        getMenu: builder.query<Products, string>({  // Products
+        getMenu: builder.query<Products, string>({
             query: (id) => `restaurantes/${id}`
         })
-        /* getAside: builder.query<ItemRestaurant, void>({
-            query: () => 'restaurantes'
-        }), */
     })
 })
 
