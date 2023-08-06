@@ -96,4 +96,14 @@ export const ModalItems = styled.div`
   .margin {
     margin: 0 24px;
   }
+
+  button {
+    padding: 4px;
+    cursor: pointer;
+    background-color: ${cores.amarelo};
+    color: ${cores.vermelho};
+    font-weight: bold;
+    width: 218px;
+    border: none;
+  }
 `
