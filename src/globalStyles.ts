@@ -4,7 +4,7 @@ export const cores = {
   vermelho: '#e66767',
   branco: '#fff',
   amarelo: '#ffebd9',
-  linkColor: '#a2a2a2'
+  linkColor: 'rgba(230, 103, 103, 0.7)'
 }
 
 const GlobalStyle = createGlobalStyle`
