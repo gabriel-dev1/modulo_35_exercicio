@@ -1,9 +1,9 @@
 import ProductRest from '../ProductsRest'
-import { ItemRestaurant } from '../../pages/Home'
+import { Products } from '../../pages/Home'
 import { Section } from './styles'
 
 export type Props = {
-  items: ItemRestaurant[]
+  items: Products
 }
 
 const ProductsRestList = ({ items }: Props) => {
@@ -16,15 +16,17 @@ const ProductsRestList = ({ items }: Props) => {
         <Section>
         <div className="container">
             <ul>
-               {items.map((produto) => (
+               {items.cardapio.map((produto) => (
                   <li key={produto.id}>
                     <ProductRest
-                      id={produto.id}
-                      title={produto.nome}
-                      description={produto.descricao}
-                      image={produto.foto}
-                      porcao={produto.porcao}
-                      />
+                     produtos={produto}
+                     id={produto.id}
+                     foto={produto.foto}
+                     preco={produto.preco}
+                     descricao={produto.descricao}
+                     nome={produto.nome}
+                     porcao={produto.porcao}
+                    />
                   </li>
                 ))}
             </ul>
