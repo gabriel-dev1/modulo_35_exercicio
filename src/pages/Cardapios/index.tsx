@@ -1,38 +1,35 @@
 import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import { Products } from '../../pages/Home'
+import { useGetMenuQuery } from '../../services/api'
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import ProductsRestList from '../../components/ProductsRestList'
+import Cart from '../../components/Cart'
+
+export const formataPreco = (preco = 0) => {
+  return new Intl.NumberFormat('pt-br', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
+}
 
 const Cardapios = () => {
   const { id } = useParams()
-  const [item, setItem] = useState<Products>()
-  const [banner, setBanner] = useState<Products>()
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  const { data: menu } = useGetMenuQuery(id!)
 
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setItem(res))
-  }, [id])
-
-  useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`).then((res) => res.json()).then((res) => setBanner(res))
-  }, [id])
-
-  if (!item) {
-    return <h3>carregando</h3>
-  }
-
-  if (!banner) {
-    return <h3>carregando</h3>
+  if (!menu) {
+    return <h3>Carregando...</h3>
   }
 
   return (
-   <>
-      <Header headerProps={'profile'} />
-      <Banner produto={banner} />
-     <ProductsRestList items={item.cardapio} />
-   </>
+    <>
+      <Header headerProps="profile" />
+      <Banner produto={menu} />
+      <ProductsRestList items={menu} />
+      <Cart />
+    </>
   )
+
 }
 
 export default Cardapios
