@@ -3,8 +3,8 @@ import { Section } from './styles'
 import { Products } from '../../pages/Home'
 
 export type Props = {
-  title: string
   products: Products[]
+  produtos?: Products
 }
 
 const ProductsList = ({ products }: Props) => {
@@ -15,12 +15,7 @@ const ProductsList = ({ products }: Props) => {
             {products.map((product) => (
               <li key={product.id}>
                 <Product
-                  id={product.id}
-                  title={product.titulo}
-                  description={product.descricao}
-                  image={product.capa}
-                  avaliacao={product.avaliacao}
-                  tipo={product.tipo}
+                  item={product}
                 />
               </li>
             ))}
