@@ -1,11 +1,11 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { ItemRestaurant } from '../../pages/Home'
+import { formataPreco } from '../../pages/Cardapios'
+import { add, open } from '../../store/reducers/Cart'
 import {  Card, CardFooter, Image, ModalItems, ModalStyles } from './styles'
 import Button from '../Button'
 import fechar from '../../assets/images/fechar.png'
-import { ItemRestaurant } from '../../pages/Home'
-import { formataPreco } from '../../pages/Cardapios'
-import { useDispatch } from 'react-redux'
-import { add, open } from '../../store/reducers/Cart'
 
 export type Props = {
   id: number
@@ -28,8 +28,8 @@ const ProductRest = ({ foto, preco, descricao, nome, porcao, produtos }: Props) 
   })
 
   const getDescricao = (description: string) => {
-    if (description.length > 90) {
-      return description.slice(0, 80) + '...'
+    if (description.length > 100) {
+      return description.slice(0, 95) + '...'
     }
   }
 
@@ -47,7 +47,7 @@ const ProductRest = ({ foto, preco, descricao, nome, porcao, produtos }: Props) 
           <p>{getDescricao(descricao)}</p>
           <Button variant='primary' type="button" onClick={() => setModal({
             isVisible: true
-          })}>Mais detalhes</Button>
+          })}>Adicionar ao carrinho</Button>
         </CardFooter>
       </Card>
       <ModalStyles className={modal.isVisible ? 'isVisible' : ''}>

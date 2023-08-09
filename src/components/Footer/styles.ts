@@ -10,18 +10,18 @@ export const FooterStyle = styled.footer`
   justify-content: center;
   align-items: center;
 
-  span {
-    font-size: 10px;
-  }
-`
+  div {
+    text-align: center;
+    width: 480px;
 
-export const Li = styled.li`
-  margin-right: 8px;
+    span {
+      font-size: 10px;
+    }
+  }
 `
 
 export const Link = styled.a`
   margin-right: 8px;
-  margin-left: 12px;
   text-decoration: none;
   font-weight: bold;
   color: #e66767;

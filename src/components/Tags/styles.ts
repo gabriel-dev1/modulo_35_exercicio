@@ -7,6 +7,6 @@ export const TagStyle = styled.div<Props>`
   color: ${cores.branco};
   display: inline-block;
   font-weight: bold;
-  padding: 8px 16px;
+  padding: 8px 4px;
   font-size: 12px;
 `

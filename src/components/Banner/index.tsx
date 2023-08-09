@@ -1,5 +1,4 @@
 import { Img } from './styles'
-import Tag from '../Tags'
 import { Products } from '../../pages/Home'
 
 type Props = {
@@ -16,7 +15,7 @@ const Banner = ({ produto }: Props) => {
       <Img style={{backgroundImage: `url(${produto.capa})`}}>
           <div className="container">
             <div>
-              <Tag>{produto?.tipo}</Tag>
+              <span>{produto?.tipo}</span>
             </div>
             <h2>{produto?.titulo}</h2>
           </div>

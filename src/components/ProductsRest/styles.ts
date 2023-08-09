@@ -8,10 +8,10 @@ export const Card = styled.div`
   padding: 8px;
   line-height: 27px;
   height: 100%;
-  border-radius: 8px;
 
   p {
-    padding: 16px 0;
+    padding: 8px 0;
+    font-size: 14px;
   }
 `
 
@@ -23,9 +23,9 @@ export const CardFooter = styled.div`
 `
 
 export const Image = styled.img`
-  width: 100%;
-  height: 217px;
-  border-radius: 8px;
+  width: 304px;
+  height: 167px;
+  object-fit: cover;
 `
 
 export const ModalStyles = styled.div`
@@ -59,7 +59,7 @@ export const ModalItems = styled.div`
   position: relative;
   z-index: 1;
   background-color: ${cores.vermelho};
-  color: ${cores.amarelo};
+  color: ${cores.branco};
   padding: 0 32px;
 
   header {
@@ -91,6 +91,7 @@ export const ModalItems = styled.div`
   img {
     width: 280px;
     height: 280px;
+    object-fit: cover;
   }
 
   .margin {

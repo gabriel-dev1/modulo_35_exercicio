@@ -7,7 +7,7 @@ export const Card = styled.div`
   color: ${cores.vermelho};
   width: 472px;
   height: 398px;
-  padding: 10px;
+  padding: 8px;
 
   p {
     padding: 16px 0;
@@ -15,23 +15,30 @@ export const Card = styled.div`
 
   ${TagStyle} {
     margin-right: 8px;
+    color: ${cores.amarelo};
   }
 
   a {
     background-color: #e66767;
-    color: #ffffff;
+    color: ${cores.amarelo};
     text-decoration: none;
     padding: 4px;
     font-weight: bold;
     font-size: 14px;
+  }
+
+  > img {
+    width: 100%;
+    height: 217px;
+    display: block;
+    object-fit: cover;
   }
 `
 
 export const CardFooter = styled.div`
   background-color: #fff;
   padding: 8px;
-  padding-top: 0;
-  border: 1px solid #e66767;
+  border: 1px solid ${cores.vermelho};
   border-top: none;
 
   div {
@@ -49,11 +56,6 @@ export const CardFooter = styled.div`
       }
     }
   }
-`
-
-export const Image = styled.img`
-  width: 100%;
-  height: 217px;
 `
 
 export const Infos = styled.div`

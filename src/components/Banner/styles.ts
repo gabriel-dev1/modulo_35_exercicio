@@ -32,5 +32,16 @@ export const Img = styled.div`
 
   h2 {
     color: ${cores.branco};
+    font-size: 32px;
+  }
+
+  span {
+    color: ${cores.branco};
+    font-size: 32px;
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+    line-height: normal;
+    font-style: normal;
+    width: 101px;
   }
 `
