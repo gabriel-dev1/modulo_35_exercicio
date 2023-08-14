@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 import { cores } from '../../globalStyles'
+import { ButtonStyles } from '../Button/styles'
+
+type InputGroupProps = {
+  maxWidth?: string
+}
 
 export const Overlay = styled.div`
   position: absolute;
@@ -38,11 +43,35 @@ export const Aside = styled.aside`
     justify-content: space-between;
   }
 
- p {
+ span {
     padding-top: 40px;
     padding-bottom: 16px;
     color: ${cores.amarelo};
     font-weight: 700;
+  }
+
+  ${ButtonStyles} {
+    margin-top: 8px;
+  }
+
+  .top {
+    margin-top: 16px;
+  }
+
+  .width {
+    width: 344px;
+  }
+
+  h2 {
+    padding-bottom: 8px;
+    font-size: 16px;
+    color: ${cores.amarelo};
+    font-weight: 700;
+  }
+
+  p {
+    padding: 16px 0;
+    color: ${cores.amarelo};
   }
 `
 
@@ -79,7 +108,36 @@ export const CartItem = styled.li`
     font-size: 18px;
   }
 
-  span {
+  .preco {
     color: ${cores.vermelho};
+    font-weight: 400;
+  }
+`
+
+export const Row = styled.div`
+  display: flex;
+  column-gap: 34px;
+`
+
+export const InputGroup = styled.div<InputGroupProps>`
+  margin: 8px 0;
+  max-width: ${(props) => props.maxWidth || 'auto'};
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+    color: ${cores.amarelo}
+  }
+
+  input {
+    background-color: ${cores.amarelo};
+    border: 1px solid ${cores.vermelho};
+    margin-top: 8px;
+    padding: 8px;
+    width: 100%;
+
+    &.error {
+      border: 3px solid red;
+    }
   }
 `
