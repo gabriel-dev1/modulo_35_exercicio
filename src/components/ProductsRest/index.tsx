@@ -29,7 +29,7 @@ const ProductRest = ({ foto, preco, descricao, nome, porcao, produtos }: Props) 
 
   const getDescricao = (description: string) => {
     if (description.length > 100) {
-      return description.slice(0, 95) + '...'
+      return description.slice(0, 105) + '...'
     }
   }
 
