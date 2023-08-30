@@ -204,7 +204,7 @@ const Cart = () => {
                                       <Row>
                                           <InputGroup>
                                               <label htmlFor="cep">CEP</label>
-                                              <InputMask className={checkInput('zipCode') ? 'error' : ''} mask="999" onChange={form.handleChange} value={form.values.zipCode} name="zipCode" id="cep" type="text" />
+                                              <InputMask className={checkInput('zipCode') ? 'error' : ''} mask="99999-999" onChange={form.handleChange} value={form.values.zipCode} name="zipCode" id="cep" type="text" />
                                           </InputGroup>
                                           <InputGroup>
                                               <label htmlFor="number">Número</label>
